@@ -8,14 +8,6 @@ module.exports = {
         return a - b
     }, 
 
-    multiply(a, b) {
-        return a * b
-    }, 
-
-    divide(a, b) {
-        return a / b
-    },
-
     palindrome(string) {
         return string
         .split("")
@@ -27,9 +19,17 @@ module.exports = {
         let result = 0
         array.forEach(num => { result += num})
         return result / array.length
-    }
+    },
 
-
-
-
+    fibonacci(num) {
+        let num1 = 0
+        let num2 = 1
+        for (let i = 1; i < num; i++) {
+            aux = num1 + num2;
+            num1 = num2;
+            num2 = aux;
+        }
+        return num2
+      }
+      
 };
